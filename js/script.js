@@ -14,7 +14,7 @@ const scontoMinori = 0.20;
 
 const scontoOver65 = 0.40;
 
-let scontoBiglietto, messaggio ;
+let scontoBiglietto, bigliettoScontato;
 
 
 //4
@@ -24,36 +24,25 @@ const bigliettoIntero = (kmPercorsi * costoKm) ;
 console.log (bigliettoIntero);
 
 //5
+document.getElementById('output').innerHTML = `
+<p> Il prezzo del tuo biglietto ha il costo di € ${bigliettoIntero} 
+`
+
 if(etaPasseggero<18){
   scontoBiglietto = bigliettoIntero * scontoMinori ;
-  messaggio = 'Avete diritto ad una promozione perche siete clienti under18, quindi sara applicato uno sconto del 20% sul prezzo del biglietto intero. Quindi il nuovo costo è di';
-}else if (etaPasseggero>65){
-   scontoBiglietto = bigliettoIntero * scontoOver65;
-  messaggio = 'Avete diritto ad una promozione perche siete clienti over65, quindi sara applicato uno sconto del 40% sul prezzo del biglietto intero. Quindi il nuovo costo è di';
-}else{
+  bigliettoScontato = (bigliettoIntero - scontoBiglietto);
   
-}
+  document.getElementById('output').innerHTML += `
+  Avete diritto ad una promozione perche siete clienti under18, quindi sara applicato uno sconto del 20% sul prezzo del biglietto intero. Quindi il nuovo costo è di ${bigliettoScontato} €
+`
+}else if (etaPasseggero>65){
+  scontoBiglietto = bigliettoIntero * scontoOver65;
+  bigliettoScontato = (bigliettoIntero - scontoBiglietto);
 
-
-const bigliettoScontato = (bigliettoIntero - scontoBiglietto);
-
+  document.getElementById('output').innerHTML += `
+  Avete diritto ad una promozione perche siete clienti over65, quindi sara applicato uno sconto del 40% sul prezzo del biglietto intero. Quindi il nuovo costo è di ${bigliettoScontato} €
+`
+};
 
 console.log (scontoBiglietto);
-console.log (bigliettoScontato);
-
-//6
-// document.getElementById('output').innerHTML = `
-// <p> Il prezzo del tuo biglietto ha il costo di € ${bigliettoIntero} <br>
-// ${messaggio} ${bigliettoScontato} 
-// `
-
-if(typeof etaPasseggero !== 'undefined') {
-  document.getElementById('output').innerHTML = `
-  <p> Il prezzo del tuo biglietto ha il costo di € ${bigliettoIntero} <br>
-  ${messaggio} ${bigliettoScontato} 
-  `
-} else {
-  document.getElementById('output').innerHTML = `
-  <p> Il prezzo del tuo biglietto ha il costo di € ${bigliettoIntero} ;
-  `
-}
+console.log ( bigliettoScontato);

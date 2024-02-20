@@ -1,0 +1,16 @@
+body{
+  background-color: rgba(0, 0, 255, 0.7);
+}
+h1{
+  font-size: 4rem;
+  color: grey;
+}
+
+div{
+  font-size: 2rem;
+  color: white;
+}
+.centro{
+  margin-top: 20px;
+  text-align: center;
+}
