@@ -31,7 +31,7 @@ if(etaPasseggero<18){
    scontoBiglietto = bigliettoIntero * scontoOver65;
   messaggio = 'Avete diritto ad una promozione perche siete clienti over65, quindi sara applicato uno sconto del 40% sul prezzo del biglietto intero. Quindi il nuovo costo è di';
 }else{
-  messaggio = null;
+  
 }
 
 
@@ -42,7 +42,18 @@ console.log (scontoBiglietto);
 console.log (bigliettoScontato);
 
 //6
-document.getElementById('output').innerHTML = `
-<p> Il prezzo del tuo biglietto ha il costo di € ${bigliettoIntero} <br>
-${messaggio} ${bigliettoScontato} 
-`
+// document.getElementById('output').innerHTML = `
+// <p> Il prezzo del tuo biglietto ha il costo di € ${bigliettoIntero} <br>
+// ${messaggio} ${bigliettoScontato} 
+// `
+
+if(typeof risultato !== 'undefined') {
+  document.getElementById('output').innerHTML = `
+  <p> Il prezzo del tuo biglietto ha il costo di € ${bigliettoIntero} <br>
+  ${messaggio} ${bigliettoScontato} 
+  `
+} else {
+  document.getElementById('output').innerHTML = `
+  <p> Il prezzo del tuo biglietto ha il costo di € ${bigliettoIntero} ;
+  `
+}
