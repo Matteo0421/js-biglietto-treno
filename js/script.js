@@ -47,7 +47,7 @@ console.log (bigliettoScontato);
 // ${messaggio} ${bigliettoScontato} 
 // `
 
-if(typeof risultato !== 'undefined') {
+if(typeof etaPasseggero !== 'undefined') {
   document.getElementById('output').innerHTML = `
   <p> Il prezzo del tuo biglietto ha il costo di € ${bigliettoIntero} <br>
   ${messaggio} ${bigliettoScontato} 
