@@ -8,3 +8,8 @@ va applicato uno sconto del 40% per gli over 65.
 L’output del prezzo finale va messo fuori in forma umana (con massimo due decimali, per indicare centesimi sul prezzo). Questo richiederà un minimo di ricerca.
 
 ## Svolgimento: 
+1. chiedere all'utente con un promt il numero di km da percorrere
+2. chiedere all'utente con un promt la sua età
+3. calcolare il prezzo del biglietto con i paramentri indicati
+4. scontare il prezzo del biglietto nelle caratteristiche indicate 
+5. stampare il risuldato in u  tag html
