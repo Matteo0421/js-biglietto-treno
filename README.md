@@ -12,4 +12,4 @@ L’output del prezzo finale va messo fuori in forma umana (con massimo due deci
 2. chiedere all'utente con un promt la sua età
 3. dichiarare tutti gli elementi, costo per km e sconti
 4. calcolare il prezzo del biglietto intero con i paramentri indicati
-5. scontare il prezzo del biglietto nelle caratteristiche indicate e stampare il risuldato in un tag html
+5. scontare il prezzo del biglietto nelle caratteristiche indicate e stampare il risuldato in un tag html.
