@@ -35,7 +35,7 @@ if(etaPasseggero<18){
   document.getElementById('output').innerHTML += `
   Avete diritto ad una promozione perche siete clienti under18, quindi sara applicato uno sconto del 20% sul prezzo del biglietto intero. Quindi il nuovo costo è di ${bigliettoScontato} €
 `
-}else if (etaPasseggero>65){
+}else if (etaPasseggero>=65){
   scontoBiglietto = bigliettoIntero * scontoOver65;
   bigliettoScontato = (bigliettoIntero - scontoBiglietto);
 
